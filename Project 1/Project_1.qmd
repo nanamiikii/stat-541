@@ -2,7 +2,11 @@
 title: "Project 1"
 author: "Emi Degembe"
 date: today
-format: html
+format: 
+  html:
+    code-fold: true
+    code-tools: true
+    toc: true
 ---
 
 # Context 
@@ -64,35 +68,36 @@ cases_year <- read_xlsx(here("403-table-web-reporting-data.xlsx"), 2) %>%
   slice(-1)
 ```
 
-# Initial Research questions
+# Initial Research Questions
 
 Two research questions that could be address with the dataset provided could be: 
 
-* How has Measels cases changed over time by region?
-  * sketch: 
-    ![]()
+* How has the laboratory-confirmed cases changed over time by region?
+  * sketch: \
+    ![](confirmed_cases_sketch.jpg)
 * What is the relationship between Measels cases and Rubella cases over time?
 
 Two research questions that could be addressed with supplementary data could be:
 
 * Based on the density of healthcare resources in a fixed area, is there a relationship between the resources and measels/rubella cases?
 * How has the [incidence and prevalence rate](https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson3/section2.html) changed over the years in each of the WHO regions?
-  * sketch: 
+  * sketch: \
+    ![](incidence_prevalence_sketch.jpg)
 
 <!-- 
 ######### CHECKPOINT 1 ##########
-By the end of the week, you should have a draft report which:
+By the end of the week, you should have a draft report which: 
 
-describes the context of the data
+describes the context of the data --- DONE
 
-explains what cleaning has been done to the data
+explains what cleaning has been done to the data --- DONE
 
-poses at least two research questions that could be addressed with these data
+poses at least two research questions that could be addressed with these data --- DONE
 
-poses at least two research questions that could be addressed using supplemental data
+poses at least two research questions that could be addressed using supplemental data --- DONE
 
-sketches out two visualizations that could be made to address the research questions you posed above
--->
+sketches out two visualizations that could be made to address the research questions you posed above --- DONE
+
 ```{r}
 #| echo: false
 library(tidyverse)
@@ -107,3 +112,4 @@ tuesdata <- tidytuesdayR::tt_load('2025-06-24')
 cases_month <- tuesdata$cases_month
 cases_year <- tuesdata$cases_year
 ```
+-->
